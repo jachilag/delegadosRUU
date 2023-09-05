@@ -5,11 +5,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.proyecto_rnec.demo.DTO.CreatedPuesto;
 import com.proyecto_rnec.demo.Documents.Puesto;
 import com.proyecto_rnec.demo.Repository.PuestoRepository;
 
+@Service
 public class PuestoService {
     @Autowired
     private PuestoRepository puestoRepository;
