@@ -43,37 +43,18 @@ $('#datos_delegado').show();
   let htmlCode = "";
 
   //create the header's table
-  htmlCode += " <thead class='thead-dark'><tr>"
-  if(response.delegados.puesto == null){
-      tHeadersDelegados_2.forEach(element => {
-          htmlCode += "<th>" + element + "</th>";
-      });
-    } else {
-      tHeadersDelegados_1.forEach(element => {
-          htmlCode += "<th>" + element + "</th>";
-      });
+  htmlCode += "<tr><th scope='row' class='text-right px-3'>Cedula: </th><td>" + response.id + "</td></tr>";
+  htmlCode += "<tr><th scope='row' class='text-right px-3'>nombre: </th><td>" + response.nombre + "</td></tr>";
+
+  if(response.puesto != null){
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Puesto N°: </th><td>" + response.puesto.mesas + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Nombre Puesto:  </th><td>" + response.puesto.ubicacion + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Cantidad Mesas: </th><td>" + response.puesto.direccion + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Ubicacion: </th><td>" + response.puesto.nombre_encargado + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Direccion Puesto: </th><td>" + response.puesto.cel_encargado + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Encargado puesto: </th><td>" + response.puesto.cel_encargado + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Celular Encargado puesto: </th><td>" + response.puesto.cel_encargado + "</td></tr>";
   }
-
-  htmlCode += "</tr></thead>";
-
-
-  htmlCode += "<tbody>";
-  htmlCode += "<tr class='centrar text-center'>";
-  htmlCode += "<td>" + response.id + "</td>";
-  htmlCode += "<td>" + response.nombre + "</td>";
-
- if (response.puesto != null){
-     htmlCode += "<td>" + response.puesto.id + "</td>";
-     htmlCode += "<td>" + response.puesto.nombre +"</td>";
-     htmlCode += "<td>" + response.puesto.mesas + "</td>";
-     htmlCode += "<td>" + response.puesto.ubicacion + "</td>";
-     htmlCode += "<td>" + response.puesto.direccion + "</td>";
-     htmlCode += "<td>" + response.puesto.nombre_encargado + "</td>";
-     htmlCode += "<td>" + response.puesto.cel_encargado + "</td>";
- }
-
-  htmlCode += "</tr>";
-  htmlCode += "</tbody>";
 
   $("#" + idTableHtml).html("");
   $("#" + idTableHtml).empty();
