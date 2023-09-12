@@ -12,16 +12,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "puestos")
-public class Puesto implements Serializable {
+@Document(collection = "administradores")
+public class Administrador implements Serializable {
     @Id
     private String id;
-    private Integer mesas;
     private String nombre;
-    private String ubicacion;
-    private String direccion;
-    private String nombre_encargado;
-    private String cel_encargado;
-    private String correo_encargado;
-    private String localidad;
+    private String password;
+    
 }

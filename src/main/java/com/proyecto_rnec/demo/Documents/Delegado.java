@@ -19,5 +19,5 @@ public class Delegado implements Serializable {
     private String nombre;
     private String celular;
     private String correo; 
-    private Puesto puesto;   
+    private Puesto puesto;  
 }
