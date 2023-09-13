@@ -1,9 +1,9 @@
-window.URL_ADMIN = "http://localhost:8080/api/administrador/";
-window.URL_PUESTO = "http://localhost:8080/api/puesto/";
-window.URL_DELEGADO = "http://localhost:8080/api/delegado/";
-// window.URL_ADMIN = "http://150.136.169.53:8080/api/administrador/";
-// window.URL_PUESTO = "http://150.136.169.53:8080/api/puesto/";
-// window.URL_DELEGADO = "http://150.136.169.53:8080/api/delegado/";
+// window.URL_ADMIN = "http://localhost:8080/api/administrador/";
+// window.URL_PUESTO = "http://localhost:8080/api/puesto/";
+// window.URL_DELEGADO = "http://localhost:8080/api/delegado/";
+window.URL_ADMIN = "http://150.136.169.53:8080/api/administrador/";
+window.URL_PUESTO = "http://150.136.169.53:8080/api/puesto/";
+window.URL_DELEGADO = "http://150.136.169.53:8080/api/delegado/";
 
 window.t_headers_admin = ['Cédula','Nombre'];
 window.t_headers_puesto = ['ID','Nombre','Mesas','Ubicacion','Encargado','Cel. Encargado','Localidad'];
