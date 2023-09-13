@@ -6,11 +6,20 @@ function welcomeAdmin(){
         sessionStorage.setItem("thisUrl",window.location.href);
         switch (sessionStorage.getItem("entidad")){
           case 'puesto':
-            URL_TABLA = window.URL_PUESTO; tHeaders = window.t_headers_puesto; break;
+            URL_TABLA = window.URL_PUESTO; 
+            tHeaders = window.t_headers_puesto; 
+            $("#titulo_tabla").text("Edite o Elimine datos de los PUESTOS DE VOTACIÓN");
+            break;
           case 'delegado':
-            URL_TABLA = window.URL_DELEGADO; tHeaders = window.t_headers_delegado; break;
+            URL_TABLA = window.URL_DELEGADO; 
+            tHeaders = window.t_headers_delegado; 
+            $("#titulo_tabla").text("Edite o Elimine datos de los DELEGADOS");
+            break;
           case 'admin':
-            URL_TABLA = window.URL_ADMIN;tHeaders = window.t_headers_admin; break;
+            URL_TABLA = window.URL_ADMIN;
+            tHeaders = window.t_headers_admin; 
+            $("#titulo_tabla").text("Edite o Elimine datos de los ADMINISTRADORES");
+            break;
         
           default:
             break;
@@ -102,7 +111,7 @@ function showDataAdmins(data) {
     htmlCode += "<tr class='centrar text-center'>";
     htmlCode += "<td>" + data[i].id + "</td>";
     htmlCode += "<td>" + data[i].nombre + "</td>";
-    htmlCode += "<td><a href='#' class='btn btn-primary' onclick='getInformation(" + data[i].id + ")'>Consultar</a></td>";
+    htmlCode += "<td><a href='#' class='btn btn-primary' onclick='getInformation(" + data[i].id + ")'>Actualizar</a></td>";
     htmlCode += "<td><button class='btn btn-danger' onclick='deleteData(" + data[i].id + ")'>✕</button></td>";
     htmlCode += "</tr>";
     }
@@ -128,7 +137,7 @@ function showDataDelegados(data) {
     htmlCode += "<td>" + data[i].celular + "</td>";
     htmlCode += "<td>" + data[i].correo + "</td>";
     htmlCode += "<td>" + data[i].puesto.id +" - "+ data[i].puesto.nombre+ " - "+data[i].puesto.ubicacion+ "</td>";
-    htmlCode += "<td><a href='#' class='btn btn-primary' onclick='getInformation(" + data[i].id + ")'>Consultar</a></td>";
+    htmlCode += "<td><a href='#' class='btn btn-primary' onclick='getInformation(" + data[i].id + ")'>Actualizar</a></td>";
     htmlCode += "<td><button class='btn btn-danger' onclick='deleteData(" + data[i].id + ")'>✕</button></td>";
     htmlCode += "</tr>";
     }
@@ -156,7 +165,7 @@ function showDataPuestos(data) {
     htmlCode += "<td>" + data[i].nombre_encargado + "</td>";
     htmlCode += "<td>" + data[i].cel_encargado + "</td>";
     htmlCode += "<td>" + data[i].localidad + "</td>";
-    htmlCode += "<td><a href='#' class='btn btn-primary' onclick='getInformation(" + data[i].id + ")'>Consultar</a></td>";
+    htmlCode += "<td><a href='#' class='btn btn-primary' onclick='getInformation(" + data[i].id + ")'>Actualizar</a></td>";
     htmlCode += "<td><button class='btn btn-danger' onclick='deleteData(" + data[i].id + ")'>✕</button></td>";
     htmlCode += "</tr>";
     }

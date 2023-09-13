@@ -76,10 +76,10 @@ public class PuestoService {
 	public Puesto updPuesto(Puesto puesto) {
         Optional<Puesto> myPuesto = puestoRepository.getPuestoById(puesto.getId());
 
-        if (!myPuesto.isPresent())
+        if (myPuesto.isPresent())
             return puestoRepository.updPuesto(puesto);
         else
-            return puesto;
+            return new Puesto();
 	}
     
     public List<Puesto> updPuestos(List<Puesto> puesto) {

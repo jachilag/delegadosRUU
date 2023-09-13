@@ -59,7 +59,7 @@ public class AdministradorService {
         if (!myAdmin.getNombre().equals("NO DEFINIDO"))
             return administradorRepository.updAdmin(admin);
         else
-            return admin;
+            return new Administrador();
     }
 
 

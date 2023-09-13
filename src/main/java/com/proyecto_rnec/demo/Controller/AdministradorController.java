@@ -36,8 +36,8 @@ public class AdministradorController {
         return administradorService.getAdmin(id, password);
     }
 
-    @GetMapping("/{id}")
-    public Administrador getAdminById(@PathVariable String id) {
+    @GetMapping("/id/{id}")
+    public Administrador getAdminById(@PathVariable("id") String id) {
         return administradorService.getAdminById(id);
     }
 

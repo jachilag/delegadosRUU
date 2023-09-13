@@ -77,7 +77,7 @@ public class DelegadoService {
         if (!myDelegado.getNombre().equals("NO DEFINIDO"))
             return delegadoRepository.updDelegado(delegado);
         else
-            return delegado;
+            return new Delegado();
 	}
     
     public List<Delegado> updDelegados(List<Delegado> delegados) {

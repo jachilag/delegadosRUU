@@ -28,15 +28,15 @@ $('#datos_delegado').show();
 
   //create the header's table
   htmlCode += "<tr><th scope='row' class='text-right px-3'>Cedula: </th><td>" + response.id + "</td></tr>";
-  htmlCode += "<tr><th scope='row' class='text-right px-3'>nombre: </th><td>" + response.nombre + "</td></tr>";
+  htmlCode += "<tr><th scope='row' class='text-right px-3'>Delegado: </th><td>" + response.nombre + "</td></tr>";
 
   if(response.puesto != null && response.puesto.id != null){
-      htmlCode += "<tr><th scope='row' class='text-right px-3'>Puesto N°: </th><td>" + response.puesto.mesas + "</td></tr>";
-      htmlCode += "<tr><th scope='row' class='text-right px-3'>Nombre Puesto:  </th><td>" + response.puesto.ubicacion + "</td></tr>";
-      htmlCode += "<tr><th scope='row' class='text-right px-3'>Cantidad Mesas: </th><td>" + response.puesto.direccion + "</td></tr>";
-      htmlCode += "<tr><th scope='row' class='text-right px-3'>Ubicacion: </th><td>" + response.puesto.nombre_encargado + "</td></tr>";
-      htmlCode += "<tr><th scope='row' class='text-right px-3'>Direccion Puesto: </th><td>" + response.puesto.cel_encargado + "</td></tr>";
-      htmlCode += "<tr><th scope='row' class='text-right px-3'>Encargado puesto: </th><td>" + response.puesto.cel_encargado + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Puesto N°: </th><td>" + response.puesto.id + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Nombre Puesto:  </th><td>" + response.puesto.nombre + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Cantidad Mesas: </th><td>" + response.puesto.mesas + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Ubicacion: </th><td>" + response.puesto.ubicacion + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Direccion Puesto: </th><td>" + response.puesto.direccion + "</td></tr>";
+      htmlCode += "<tr><th scope='row' class='text-right px-3'>Encargado puesto: </th><td>" + response.puesto.nombre_encargado + "</td></tr>";
       htmlCode += "<tr><th scope='row' class='text-right px-3'>Celular Encargado puesto: </th><td>" + response.puesto.cel_encargado + "</td></tr>";
     }
 

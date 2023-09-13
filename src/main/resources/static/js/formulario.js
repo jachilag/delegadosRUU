@@ -157,7 +157,7 @@ function getPuestos() {
     dataType: "json",
 
     success: function (response) {
-      showPuestos(response); //".items" has been deleted 'cause it doesn't work forward
+      showPuestos(response);
     },
     error: function (xhr, status) {
       alert("ha sucedido un problema");
